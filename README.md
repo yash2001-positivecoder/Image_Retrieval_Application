@@ -1,2 +1,2 @@
 # Image_Retrieval_Application
-Searching images using context
+Search images in your gallery using a context or an image.
