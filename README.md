@@ -10,6 +10,7 @@ Search images in your gallery using a context or an image.
  2. Pandas
  3. annoy
  4. flask
+ 5. transformer
 
 # Run the app.py
 In the root directory run the command -- `flask run`
