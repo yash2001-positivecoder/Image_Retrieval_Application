@@ -13,7 +13,8 @@ Search images in your gallery using a context or an image.
  5. transformer
 
 # Run the app.py
-In the root directory run the command -- `flask run`
+In the root directory, run the command -- `flask run`
 
 # NOTE:
- You'll need to create a folder name - "Gallery" and add your images in it and put this folder as `static\Gallery`
+1. You'll need to create a folder name - "Gallery" and add your images in it and put this folder as `static\Gallery`
+2. You'll also need to change the `output.csv` to get the `captions` and `metadeta` of your images.
