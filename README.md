@@ -13,3 +13,6 @@ Search images in your gallery using a context or an image.
 
 # Run the app.py
 In the root directory run the command -- `flask run`
+
+# NOTE:
+ You'll need to create a folder name - "Gallery" and add your images in it and put this folder as `static\Gallery`
