@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ImageSeeker</title>
+
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./static/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <section class="start">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <span>Image Retrieval Application</span>
+                <form method="POST"  class="d-flex" action="/result">
+                    <input class="form-control me-2" name="query" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" method="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </section>
+
+    <section class="main">
+        <div id="cards">
+            <div class="card-template">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="./static//Gallery/0101.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="card-template">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="./static/Gallery/0102.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="card-template">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="./static//Gallery/0103.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="card-template">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="./static/Gallery/0052.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="card-template">
+                <div class="card-content">
+                    <div class="card-image">
+                    <img src="./static/Gallery/0105.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="card-template">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="./static/Gallery/0106.jpg" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursor -->
+    <div id="trailer"></div>
+
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./static/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/main.js"></script>
+</body>
+</html>
