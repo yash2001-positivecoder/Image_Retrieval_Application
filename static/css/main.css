@@ -1,0 +1,223 @@
+:root {
+    --bg-color: rgb(13, 13, 13);
+    --card-color: rgb(17, 17, 17);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Archivo Black', sans-serif;
+    background-color: var(--bg-color);
+}
+
+/* Cursor CSS */
+#trailer {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 20px;
+
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+
+    pointer-events: none; 
+    opacity: 0;
+    transition: opacity 500ms ease;
+
+    display: grid;
+    place-items: center;
+}
+
+body:hover > #trailer {
+    opacity: 1;
+}
+
+/* Start section */
+.start {
+    height: fit-content;
+    overflow: hidden;
+    color: rgb(240, 240, 240);
+    padding-bottom: 50px;
+}
+
+.navbar {
+    font-size: 2em;
+}
+
+.navbar a{
+    background-color: var(--bg-color);
+    border: none;
+}
+
+/* Main Section */
+.main {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+#cards {
+    align-items: center;
+    display: flex;  
+    flex-wrap: wrap;
+    gap: 8px;  
+    max-width: 80vw;
+    width: 80vw;
+}
+
+.card-template {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    position: relative;
+    width: 400px;  
+}
+
+.card-template > .card-content {
+    background-color: var(--card-color);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+}
+
+.card-image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-image img{
+    width: 300px;
+}
+
+/* Responsiveness - pretty much messy*/
+@media(max-width: 1600px) {
+    .card-template {
+        flex-shrink: 1;
+        height: 260px;
+        width: 300px;
+    }
+
+    #cards {    
+        max-width: 916px;
+        padding: 10px 0px;
+    }
+}
+
+@media(max-width: 1000px) {
+    body {
+        align-items: flex-start;  
+        overflow: auto;
+    }
+    
+    #cards {    
+        max-width: 916px;
+        padding: 10px 0px;
+    }
+    
+    .card-template {
+        flex-shrink: 1;
+        height: 220px;
+        width: calc(50% - 4px);
+    }
+
+    #trailer{
+        display: none;
+    }
+}
+
+@media(max-width: 1200px) and (max-height: 1400px) {
+    .start {
+        height: fit-content;
+    }
+    .main {
+        height: fit-content;
+    }
+}
+
+@media (max-width: 600px) {
+    #menu-txt {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .start {
+        height: fit-content;
+    }
+    .main {
+        height: fit-content;
+    }
+}
+
+@media(max-width: 500px) {
+    .card-template {
+        height: 180px;
+    }
+    
+    .card-image {
+        height: 80px;  
+    }
+    
+    .card-image > i {
+        font-size: 3em;
+    }
+        
+    .card-info-wrapper {
+        padding: 0px 10px;
+    }
+    
+    .card-info > i { 
+        font-size: 0.8em; 
+    }
+    
+    .card-info-title > h3 {
+        font-size: 0.9em;
+    }
+
+    .card-info-title > h4 {
+        font-size: 0.8em;
+        margin-top: 4px;
+    }
+    .start {
+        height: fit-content;
+    }
+    .main {
+        height: fit-content;
+    }
+}
+
+@media(max-width: 600px) and (min-height: 1000px){
+    .start {
+        height: fit-content;
+    }
+    .main {
+        height: fit-content;
+    }
+}
+
+@media(max-width: 340px) {
+    .card-template {
+        width: 100%;
+    }
+    .main {
+        height: fit-content;
+    }
+}
