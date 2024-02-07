@@ -2,7 +2,6 @@ flask
 annoy
 numpy
 pandas
-re
 transformers
 torch
 gunicorn
